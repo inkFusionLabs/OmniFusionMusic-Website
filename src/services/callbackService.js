@@ -167,37 +167,21 @@ class CallbackService {
   }
 
   // Handle download callback
-  async handleDownloadCallback(code) {
-    try {
-      // For demo purposes, return mock data instead of making API calls
-      return {
-        success: true,
-        downloadUrl: 'https://example.com/demo-download',
-        message: 'Demo download successful'
-      }
-    } catch (error) {
-      console.error('Error handling download callback:', error)
-      return {
-        success: false,
-        error: error.message
-      }
+  async handleDownloadCallback(_code) {
+    // For demo purposes, return mock data instead of making API calls
+    return {
+      success: true,
+      downloadUrl: 'https://example.com/demo-download',
+      message: 'Demo download successful'
     }
   }
 
   // Handle newsletter subscription callback
-  async handleNewsletterCallback(token) {
-    try {
-      // For demo purposes, return mock data instead of making API calls
-      return {
-        success: true,
-        message: 'Demo newsletter subscription confirmed'
-      }
-    } catch (error) {
-      console.error('Error handling newsletter callback:', error)
-      return {
-        success: false,
-        error: error.message
-      }
+  async handleNewsletterCallback(_token) {
+    // For demo purposes, return mock data instead of making API calls
+    return {
+      success: true,
+      message: 'Demo newsletter subscription confirmed'
     }
   }
 
