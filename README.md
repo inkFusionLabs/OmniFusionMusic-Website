@@ -1,211 +1,152 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OmniFusion Music - Universal Music Command Center
 
-## Getting Started
+Official website for OmniFusion Music - The ultimate universal music streaming desktop application that aggregates multiple streaming services into one beautiful, seamless interface.
 
-First, run the development server:
+## 🎵 About OmniFusion Music
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+OmniFusion Music is a cross-platform desktop application that connects to Spotify, Apple Music, YouTube Music, Tidal, and more from one beautiful, seamless interface. Download for Windows, macOS, and Linux.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Live Demo:** [omni-fusion-music-website.vercel.app](https://omni-fusion-music-website.vercel.app)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌟 Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🎧 Universal Music Streaming
+- **Multi-Platform Support** - Connect to Spotify, Apple Music, YouTube Music, Tidal, and more
+- **Unified Interface** - One beautiful interface for all your music services
+- **Cross-Platform** - Available for Windows, macOS, and Linux
+- **Free & Open Source** - Completely free to use and contribute to
 
-## Learn More
+### 🎨 Modern User Experience
+- **Beautiful UI/UX** - Modern, responsive design with smooth animations
+- **Voice Control** - Control your music with voice commands
+- **Keyboard Shortcuts** - Power user shortcuts for quick navigation
+- **Theme Customization** - Personalize your music experience
 
-To learn more about Next.js, take a look at the following resources:
+### 🔧 Advanced Features
+- **Playlist Synchronization** - Sync playlists across different services
+- **AI-Powered Recommendations** - Smart music discovery
+- **Music Visualizer** - Real-time audio visualization
+- **Performance Monitoring** - Track app performance and usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# Area22 - Professional DJ Services Website
-
-A modern, responsive website for a professional DJ business featuring green strobe light disco effects, interactive booking calendar, and comprehensive company information.
-
-## 🌟 Features
-
-### 🎵 Professional DJ Services
-- **Wedding Receptions** - Perfect atmosphere for your special day
-- **Corporate Events** - Professional entertainment for business functions
-- **Birthday Parties** - Memorable celebrations for all ages
-- **Club Events** - High-energy performances
-- **Private Parties** - Customized experiences
-- **Music Production** - Studio services available
-
-### 📅 Interactive Booking Calendar
-- **Real-time Availability** - See which dates are available
-- **Easy Date Selection** - Click to select your preferred date
-- **Visual Indicators** - Clear distinction between available and booked dates
-- **Month Navigation** - Browse through different months
-- **Today Highlighting** - Current date is clearly marked
-
-### 🎨 Green Strobe Light Disco Effects
-- **Animated Light Effects** - Multiple green strobe lights with different timing
-- **Parallax Scrolling** - Lights move as you scroll for dynamic effect
-- **Blur Effects** - Authentic disco light appearance
-- **Performance Optimized** - Smooth animations without lag
-
-### 📱 Responsive Design
-- **Mobile-First Approach** - Optimized for all device sizes
-- **Touch-Friendly Interface** - Easy navigation on mobile devices
-- **Hamburger Menu** - Collapsible navigation for mobile
-- **Flexible Layouts** - Adapts to different screen sizes
-
-### 🎯 User Experience
-- **Smooth Scrolling** - Seamless navigation between sections
-- **Interactive Elements** - Hover effects and animations
-- **Form Validation** - Real-time validation for booking requests
-- **Confirmation Modals** - Clear feedback for form submissions
+### 📱 Progressive Web App
+- **PWA Support** - Install as a desktop app
+- **Offline Capability** - Works without internet connection
+- **Service Worker** - Background sync and caching
+- **Push Notifications** - Stay updated with new features
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- No additional software installation required
+- Node.js 18+ 
+- npm or yarn package manager
+- Modern web browser
 
 ### Installation
-1. Clone or download the project files
-2. Open `index.html` in your web browser
-3. The website will load with all features ready to use
 
-### File Structure
-```
-Area22-website/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and animations
-├── script.js           # JavaScript functionality
-└── README.md           # This documentation
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/inkFusionLabs/OmniFusionMusic-Website.git
+   cd OmniFusionMusic-Website
+   ```
 
-## 🎨 Design Features
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### Color Scheme
-- **Primary Green**: #00ff00 (Neon green for disco effects)
-- **Background**: Dark gradient (#0a0a0a to #1a1a1a)
-- **Text**: White and light gray for readability
-- **Accents**: Various shades of green for visual hierarchy
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-### Typography
-- **Headings**: Orbitron (futuristic, tech-inspired)
-- **Body Text**: Roboto (clean, readable)
-- **Icons**: Font Awesome for consistent iconography
+4. **Open your browser**
+   Navigate to [http://localhost:5173](http://localhost:5173)
 
-### Animations
-- **Strobe Lights**: Pulsing green lights with staggered timing
-- **Vinyl Disc**: Rotating animation in hero section
-- **Button Hovers**: Scale and translate effects
-- **Form Focus**: Green glow effects on input fields
+### Build for Production
 
-## 📋 Booking System
-
-### Calendar Features
-- **Interactive Date Selection**: Click any available date
-- **Availability Status**: Visual indicators for booked/available dates
-- **Month Navigation**: Previous/next month buttons
-- **Today Indicator**: Current date is highlighted
-- **Form Integration**: Selected date automatically populates booking form
-
-### Booking Form
-- **Required Fields**: Name, email, phone, event date
-- **Event Types**: Wedding, corporate, birthday, club, private, other
-- **Duration Options**: 2-6+ hours
-- **Validation**: Real-time email and phone validation
-- **Confirmation**: Modal with booking details after submission
-
-## 📞 Contact Information
-
-### Business Details
-- **Phone**: +1 (555) 123-4567
-- **Email**: info@area22dj.com
-- **Service Area**: Greater Metropolitan Area
-- **Availability**: 24/7 for events
-
-### Social Media
-- Facebook
-- Instagram
-- Twitter
-- YouTube
-- SoundCloud
-
-## 🔧 Customization
-
-### Modifying Colors
-Edit the CSS variables in `styles.css`:
-```css
-:root {
-    --primary-green: #00ff00;
-    --secondary-green: #00cc00;
-    --background-dark: #0a0a0a;
-}
+```bash
+npm run build
+npm run preview
 ```
 
-### Adding New Services
-Update the services list in the About section of `index.html`:
-```html
-<li>New Service Type</li>
+## 🛠️ Tech Stack
+
+- **Frontend**: React 19, Vite, Tailwind CSS
+- **Routing**: React Router DOM
+- **Styling**: Tailwind CSS with custom animations
+- **Build Tool**: Vite for fast development and optimized builds
+- **Deployment**: Vercel for automatic deployments
+
+## 📁 Project Structure
+
+```
+omnifusionmusic-website/
+├── src/
+│   ├── components/     # React components
+│   ├── pages/         # Page components
+│   ├── services/      # API and utility services
+│   ├── hooks/         # Custom React hooks
+│   └── config/        # Configuration files
+├── public/            # Static assets
+├── scripts/           # Build and utility scripts
+└── docs/             # Documentation
 ```
 
-### Calendar Configuration
-Modify the `generateBookedDates()` function in `script.js` to integrate with a real booking system.
+## 🎯 Features Overview
 
-## 🌐 Browser Support
+### Homepage Components
+- **Hero Section** - Main landing area with call-to-action
+- **Features Showcase** - Highlight key application features
+- **App Screenshots** - Visual demonstration of the app
+- **Interactive Demo** - Hands-on experience with the app
+- **Download Section** - Easy access to downloads
+- **Contact & Support** - User support and feedback
 
-- **Chrome**: 60+
-- **Firefox**: 55+
-- **Safari**: 12+
-- **Edge**: 79+
+### OAuth Integration
+- **Spotify Authentication** - Secure OAuth flow for Spotify
+- **GitHub Integration** - Connect with GitHub for updates
+- **Callback Handling** - Robust callback processing
+- **Token Management** - Secure token storage and refresh
 
-## 📱 Mobile Optimization
+### Analytics & Performance
+- **Google Analytics** - Track user engagement and conversions
+- **Performance Monitoring** - Real-time app performance metrics
+- **Error Tracking** - Comprehensive error reporting
+- **User Analytics** - Understand user behavior and preferences
 
-- **Touch Targets**: Minimum 44px for easy tapping
-- **Responsive Images**: Optimized for different screen sizes
-- **Fast Loading**: Optimized assets and animations
-- **Offline Capable**: Works without internet connection
+## 🌐 Deployment
 
-## 🎵 Music Integration
+The website is automatically deployed to Vercel:
 
-The website is designed to showcase DJ services with:
-- **Visual Music Elements**: Rotating vinyl disc animation
-- **Music Icons**: Font Awesome music-related icons
-- **Professional Presentation**: Clean, modern design that reflects quality
+- **Production**: [omni-fusion-music-website.vercel.app](https://omni-fusion-music-website.vercel.app)
+- **Automatic Deployments** - Every push to main branch triggers deployment
+- **Preview Deployments** - Pull requests get preview URLs
 
-## 🔮 Future Enhancements
+## 🤝 Contributing
 
-Potential features for future updates:
-- **Real-time Booking System**: Integration with backend services
-- **Music Player**: Sample tracks or mixes
-- **Photo Gallery**: Event photos and testimonials
-- **Pricing Calculator**: Dynamic pricing based on event type and duration
-- **Live Chat**: Customer support integration
-- **Payment Processing**: Online deposit/payment system
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Development Setup
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
 ## 📄 License
 
-This project is created for Area22 DJ Services. All rights reserved.
+This project is open source and available under the [MIT License](LICENSE).
 
-## 🤝 Support
+## 🆘 Support
 
-For technical support or customization requests, contact the development team.
+- **Website**: [omni-fusion-music-website.vercel.app](https://omni-fusion-music-website.vercel.app)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/inkFusionLabs/OmniFusionMusic-Website/issues)
+- **Documentation**: See the [docs](docs/) folder for detailed guides
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=inkFusionLabs/OmniFusionMusic-Website&type=Date)](https://star-history.com/#inkFusionLabs/OmniFusionMusic-Website&Date)
 
 ---
 
-**Area22 - Creating unforgettable experiences with the perfect mix of music and atmosphere** 🎵✨ 
->>>>>>> aff51e5706fb3ea8f04b808b64d5c8152fb02e4d
+**OmniFusion Music** - Universal music streaming, simplified. 🎵✨
