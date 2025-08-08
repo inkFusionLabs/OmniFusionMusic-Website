@@ -2,6 +2,15 @@
 class AnalyticsService {
   constructor() {
     this.events = [];
+    this.sessionId = null;
+    this.userId = null;
+    this.isEnabled = false;
+  }
+
+  // Initialize on client side
+  initialize() {
+    if (typeof window === 'undefined') return;
+    
     this.sessionId = this.generateSessionId();
     this.userId = this.getUserId();
     this.isEnabled = this.checkAnalyticsEnabled();

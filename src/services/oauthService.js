@@ -1,6 +1,14 @@
 // OAuth Service for Real Authentication Flows
 class OAuthService {
   constructor() {
+    this.config = null;
+    this.stateStore = new Map();
+  }
+
+  // Initialize config on client side
+  initializeConfig() {
+    if (typeof window === 'undefined') return;
+    
     this.config = {
       spotify: {
         clientId: process.env.VITE_SPOTIFY_CLIENT_ID || 'your_spotify_client_id',
@@ -21,8 +29,6 @@ class OAuthService {
         authUrl: 'https://music.apple.com/oauth/authorize'
       }
     };
-    
-    this.stateStore = new Map();
   }
 
   // Generate secure random state parameter
@@ -59,6 +65,7 @@ class OAuthService {
 
   // Initialize OAuth flow
   async initiateAuth(provider) {
+    this.initializeConfig();
     const config = this.config[provider];
     if (!config) {
       throw new Error(`Unsupported provider: ${provider}`);
@@ -84,6 +91,7 @@ class OAuthService {
 
   // Handle OAuth callback
   async handleCallback(code, state) {
+    this.initializeConfig();
     const provider = this.verifyState(state);
     if (!provider) {
       throw new Error('Invalid or expired state parameter');
@@ -183,6 +191,7 @@ class OAuthService {
 
   // Refresh expired tokens
   async refreshTokens(provider) {
+    this.initializeConfig();
     const refreshToken = localStorage.getItem(`${provider}_refresh_token`);
     if (!refreshToken) {
       throw new Error('No refresh token available');

@@ -41,16 +41,16 @@ const Hero = () => {
         
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Universal Music
+          Music Transfer &
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-            Command Center
+            Playlist Cleanup
           </span>
         </h1>
         
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-          The ultimate desktop application that unifies all your music streaming services into one beautiful, 
-          seamless experience. Currently in development - join our beta program for early access.
+          The ultimate desktop application for transferring your music library between streaming services and 
+          cleaning up your playlists with intelligent automation. Currently in development - join our beta program for early access.
         </p>
 
         {/* Call to Action Buttons */}
@@ -75,8 +75,8 @@ const Hero = () => {
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
               </svg>
             </div>
-            <h3 className="text-white font-semibold text-lg mb-2">Universal Hub</h3>
-            <p className="text-white/70 text-sm">Access all your music services from one unified interface</p>
+            <h3 className="text-white font-semibold text-lg mb-2">Smart Transfer</h3>
+            <p className="text-white/70 text-sm">Transfer your music library between streaming services</p>
           </div>
           
           <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
@@ -85,8 +85,8 @@ const Hero = () => {
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
             </div>
-            <h3 className="text-white font-semibold text-lg mb-2">Beautiful Design</h3>
-            <p className="text-white/70 text-sm">Modern, intuitive interface with stunning visualizations</p>
+            <h3 className="text-white font-semibold text-lg mb-2">Playlist Cleanup</h3>
+            <p className="text-white/70 text-sm">Remove duplicates and organize your playlists automatically</p>
           </div>
           
           <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
@@ -95,8 +95,8 @@ const Hero = () => {
                 <path d="M17 3H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h5v2zm3-4H7v-2h8v2zm0-4H7V7h8v2z"/>
               </svg>
             </div>
-            <h3 className="text-white font-semibold text-lg mb-2">Cross-Platform</h3>
-            <p className="text-white/70 text-sm">Available for Windows, macOS, and Linux</p>
+            <h3 className="text-white font-semibold text-lg mb-2">AI-Powered</h3>
+            <p className="text-white/70 text-sm">Intelligent matching and automation for better results</p>
           </div>
         </div>
 

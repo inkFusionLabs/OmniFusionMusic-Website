@@ -4,6 +4,13 @@ class CacheService {
     this.cache = new Map();
     this.storagePrefix = 'omnifusion_cache_';
     this.maxAge = 24 * 60 * 60 * 1000; // 24 hours default
+    this.isInitialized = false;
+  }
+
+  // Initialize on client side
+  initialize() {
+    if (typeof window === 'undefined') return;
+    this.isInitialized = true;
   }
 
   // Set cache item with expiration
@@ -17,13 +24,15 @@ class CacheService {
     this.cache.set(key, item);
     
     // Also store in localStorage for persistence
-    try {
-      localStorage.setItem(
-        this.storagePrefix + key,
-        JSON.stringify(item)
-      );
-    } catch (error) {
-      console.warn('Failed to store cache in localStorage:', error);
+    if (this.isInitialized) {
+      try {
+        localStorage.setItem(
+          this.storagePrefix + key,
+          JSON.stringify(item)
+        );
+      } catch (error) {
+        console.warn('Failed to store cache in localStorage:', error);
+      }
     }
   }
 
@@ -36,21 +45,23 @@ class CacheService {
     }
 
     // Check localStorage
-    try {
-      const storedItem = localStorage.getItem(this.storagePrefix + key);
-      if (storedItem) {
-        const item = JSON.parse(storedItem);
-        if (!this.isExpired(item)) {
-          // Restore to memory cache
-          this.cache.set(key, item);
-          return item.value;
-        } else {
-          // Remove expired item
-          localStorage.removeItem(this.storagePrefix + key);
+    if (this.isInitialized) {
+      try {
+        const storedItem = localStorage.getItem(this.storagePrefix + key);
+        if (storedItem) {
+          const item = JSON.parse(storedItem);
+          if (!this.isExpired(item)) {
+            // Restore to memory cache
+            this.cache.set(key, item);
+            return item.value;
+          } else {
+            // Remove expired item
+            localStorage.removeItem(this.storagePrefix + key);
+          }
         }
+      } catch (error) {
+        console.warn('Failed to retrieve cache from localStorage:', error);
       }
-    } catch (error) {
-      console.warn('Failed to retrieve cache from localStorage:', error);
     }
 
     return null;
@@ -64,10 +75,12 @@ class CacheService {
   // Remove cache item
   remove(key) {
     this.cache.delete(key);
-    try {
-      localStorage.removeItem(this.storagePrefix + key);
-    } catch (error) {
-      console.warn('Failed to remove cache from localStorage:', error);
+    if (this.isInitialized) {
+      try {
+        localStorage.removeItem(this.storagePrefix + key);
+      } catch (error) {
+        console.warn('Failed to remove cache from localStorage:', error);
+      }
     }
   }
 
@@ -76,15 +89,17 @@ class CacheService {
     this.cache.clear();
     
     // Clear localStorage cache
-    try {
-      const keys = Object.keys(localStorage);
-      keys.forEach(key => {
-        if (key.startsWith(this.storagePrefix)) {
-          localStorage.removeItem(key);
-        }
-      });
-    } catch (error) {
-      console.warn('Failed to clear localStorage cache:', error);
+    if (this.isInitialized) {
+      try {
+        const keys = Object.keys(localStorage);
+        keys.forEach(key => {
+          if (key.startsWith(this.storagePrefix)) {
+            localStorage.removeItem(key);
+          }
+        });
+      } catch (error) {
+        console.warn('Failed to clear localStorage cache:', error);
+      }
     }
   }
 
@@ -93,11 +108,13 @@ class CacheService {
     const memorySize = this.cache.size;
     let storageSize = 0;
     
-    try {
-      const keys = Object.keys(localStorage);
-      storageSize = keys.filter(key => key.startsWith(this.storagePrefix)).length;
-    } catch (error) {
-      console.warn('Failed to get storage cache stats:', error);
+    if (this.isInitialized) {
+      try {
+        const keys = Object.keys(localStorage);
+        storageSize = keys.filter(key => key.startsWith(this.storagePrefix)).length;
+      } catch (error) {
+        console.warn('Failed to get storage cache stats:', error);
+      }
     }
 
     return {

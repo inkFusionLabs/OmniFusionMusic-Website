@@ -1,32 +1,38 @@
-# OmniFusion Music - Universal Music Command Center
+# OmniFusion Music - Music Transfer & Playlist Cleanup Tool
 
-Official website for OmniFusion Music - The ultimate universal music streaming desktop application that aggregates multiple streaming services into one beautiful, seamless interface.
+Official website for OmniFusion Music - The ultimate desktop application for transferring music between streaming services and cleaning up your playlists with powerful automation tools.
 
 ## 🎵 About OmniFusion Music
 
-OmniFusion Music is a cross-platform desktop application that connects to Spotify, Apple Music, YouTube Music, Tidal, and more from one beautiful, seamless interface. Download for Windows, macOS, and Linux.
+OmniFusion Music is a cross-platform desktop application that helps you transfer your music library between streaming services (Spotify, Apple Music, YouTube Music, Tidal) and clean up your playlists with intelligent automation. Download for Windows, macOS, and Linux.
 
 **Live Demo:** [omni-fusion-music-website.vercel.app](https://omni-fusion-music-website.vercel.app)
 
 ## 🌟 Key Features
 
-### 🎧 Universal Music Streaming
-- **Multi-Platform Support** - Connect to Spotify, Apple Music, YouTube Music, Tidal, and more
-- **Unified Interface** - One beautiful interface for all your music services
-- **Cross-Platform** - Available for Windows, macOS, and Linux
-- **Free & Open Source** - Completely free to use and contribute to
+### 🔄 Music Transfer & Migration
+- **Cross-Platform Transfer** - Move your music library between Spotify, Apple Music, YouTube Music, Tidal, and more
+- **Bulk Transfer Support** - Transfer entire playlists and libraries with one click
+- **Smart Matching** - Intelligent song matching across different streaming services
+- **Transfer History** - Track your transfer progress and history
+
+### 🧹 Playlist Cleanup & Management
+- **Duplicate Detection** - Find and remove duplicate songs from your playlists
+- **Dead Link Cleanup** - Remove songs that are no longer available
+- **Playlist Optimization** - Organize and optimize your playlists automatically
+- **Batch Operations** - Clean up multiple playlists at once
 
 ### 🎨 Modern User Experience
 - **Beautiful UI/UX** - Modern, responsive design with smooth animations
-- **Voice Control** - Control your music with voice commands
+- **Progress Tracking** - Real-time progress indicators for transfers and cleanup
 - **Keyboard Shortcuts** - Power user shortcuts for quick navigation
 - **Theme Customization** - Personalize your music experience
 
 ### 🔧 Advanced Features
-- **Playlist Synchronization** - Sync playlists across different services
-- **AI-Powered Recommendations** - Smart music discovery
-- **Music Visualizer** - Real-time audio visualization
-- **Performance Monitoring** - Track app performance and usage
+- **AI-Powered Matching** - Smart song matching using advanced algorithms
+- **Transfer Scheduling** - Schedule transfers for off-peak hours
+- **Backup & Restore** - Backup your playlists before making changes
+- **Performance Monitoring** - Track transfer speeds and app performance
 
 ### 📱 Progressive Web App
 - **PWA Support** - Install as a desktop app
@@ -96,14 +102,15 @@ omnifusionmusic-website/
 
 ### Homepage Components
 - **Hero Section** - Main landing area with call-to-action
-- **Features Showcase** - Highlight key application features
+- **Transfer Features** - Showcase music transfer capabilities
+- **Cleanup Tools** - Highlight playlist cleanup features
 - **App Screenshots** - Visual demonstration of the app
-- **Interactive Demo** - Hands-on experience with the app
+- **Interactive Demo** - Hands-on experience with transfer tools
 - **Download Section** - Easy access to downloads
 - **Contact & Support** - User support and feedback
 
 ### OAuth Integration
-- **Spotify Authentication** - Secure OAuth flow for Spotify
+- **Multi-Service Authentication** - Secure OAuth flow for Spotify, Apple Music, YouTube Music, Tidal
 - **GitHub Integration** - Connect with GitHub for updates
 - **Callback Handling** - Robust callback processing
 - **Token Management** - Secure token storage and refresh
@@ -149,4 +156,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**OmniFusion Music** - Universal music streaming, simplified. 🎵✨
+**OmniFusion Music** - Music transfer and playlist cleanup, simplified. 🎵✨

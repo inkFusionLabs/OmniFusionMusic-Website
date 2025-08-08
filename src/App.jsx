@@ -4,51 +4,28 @@ import HomePage from './components/HomePage';
 import Callback from './pages/Callback';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import cacheService from './services/cacheService';
-import analyticsService from './services/analyticsService';
-import appIntegrationService from './services/appIntegrationService';
 import './index.css';
 
 function App() {
   useEffect(() => {
-    // Initialize services
+    // Initialize services on client side only
     const initializeServices = async () => {
+      if (typeof window === 'undefined') return;
+      
       try {
-        // Initialize cache service
-        await cacheService.init();
-        
-        // Initialize app integration service
-        await appIntegrationService.init();
-        
         // Register service worker for PWA functionality
         if ('serviceWorker' in navigator) {
           try {
             const registration = await navigator.serviceWorker.register('/sw.js');
             console.log('Service Worker registered:', registration);
-            
-            // Track PWA installation
-            window.addEventListener('beforeinstallprompt', (e) => {
-              analyticsService.trackAppEvent('pwa_install_prompt', {
-                platform: navigator.platform,
-                user_agent: navigator.userAgent
-              });
-            });
           } catch (error) {
             console.log('Service Worker registration failed:', error);
           }
         }
         
-        // Track app initialization
-        analyticsService.trackAppEvent('initialization', {
-          services_initialized: ['cache', 'analytics', 'app_integration', 'pwa'],
-          app_installed: appIntegrationService.getAppStatus().installed,
-          pwa_supported: 'serviceWorker' in navigator
-        });
-        
-        console.log('Services initialized successfully');
+        console.log('App initialized successfully');
       } catch (error) {
-        console.error('Failed to initialize services:', error);
-        analyticsService.trackError(error, { context: 'service_initialization' });
+        console.error('Failed to initialize app:', error);
       }
     };
 

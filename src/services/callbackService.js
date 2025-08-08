@@ -1,12 +1,21 @@
 // Callback service for handling OAuth and other redirect scenarios
 class CallbackService {
   constructor() {
+    this.baseUrl = null
+    this.callbackUrl = null
+  }
+
+  // Initialize on client side
+  initialize() {
+    if (typeof window === 'undefined') return;
+    
     this.baseUrl = window.location.origin
     this.callbackUrl = `${this.baseUrl}/callback`
   }
 
   // Generate OAuth URLs for different services
   generateOAuthUrl(service, options = {}) {
+    this.initialize();
     try {
       const baseUrls = {
         spotify: 'https://accounts.spotify.com/authorize',
@@ -72,6 +81,7 @@ class CallbackService {
 
   // Store state for verification
   storeState(state, service) {
+    if (typeof window === 'undefined') return;
     try {
       const states = JSON.parse(localStorage.getItem('oauth_states') || '{}')
       states[state] = {
@@ -86,6 +96,7 @@ class CallbackService {
 
   // Verify state parameter
   verifyState(state) {
+    if (typeof window === 'undefined') return false;
     try {
       const states = JSON.parse(localStorage.getItem('oauth_states') || '{}')
       const stateData = states[state]
@@ -187,6 +198,7 @@ class CallbackService {
 
   // Generate download URL with callback
   generateDownloadUrl(platform, version) {
+    this.initialize();
     try {
       const params = new URLSearchParams({
         platform,
@@ -203,6 +215,7 @@ class CallbackService {
 
   // Generate newsletter confirmation URL
   generateNewsletterUrl(email, token) {
+    this.initialize();
     try {
       const params = new URLSearchParams({
         email,
@@ -229,6 +242,7 @@ class CallbackService {
 
   // Cleanup expired states
   cleanupExpiredStates() {
+    if (typeof window === 'undefined') return;
     try {
       const states = JSON.parse(localStorage.getItem('oauth_states') || '{}')
       const now = Date.now()
@@ -262,6 +276,5 @@ class CallbackService {
 
 // Create and export a singleton instance
 const callbackService = new CallbackService()
-callbackService.init()
 
 export default callbackService 

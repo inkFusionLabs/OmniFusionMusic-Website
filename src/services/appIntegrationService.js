@@ -2,10 +2,16 @@
 class AppIntegrationService {
   constructor() {
     this.appScheme = 'omnifusionmusic://';
-    this.websiteUrl = window.location.origin;
+    this.websiteUrl = null;
     this.isAppInstalled = false;
     this.appVersion = null;
+  }
+
+  // Initialize on client side
+  initialize() {
+    if (typeof window === 'undefined') return;
     
+    this.websiteUrl = window.location.origin;
     // Initialize app detection
     this.detectApp();
   }
