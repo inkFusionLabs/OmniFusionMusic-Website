@@ -18,8 +18,8 @@ import AppConnectionStatus from './AppConnectionStatus';
 import PressKit from './PressKit';
 import ThemeToggle from './ThemeToggle';
 import KeyboardShortcuts from './KeyboardShortcuts';
-import BetaTesting from './BetaTesting';
 import Navigation from './Navigation';
+import MusicAnimationsDemo from './MusicAnimationsDemo';
 
 const HomePage = () => {
   return (
@@ -41,7 +41,12 @@ const HomePage = () => {
       <ScreenshotsGallery />
       <InteractiveDemo />
       
-      {/* New Interactive Features */}
+      {/* Music Animations Demo */}
+      <section id="music-animations">
+        <MusicAnimationsDemo />
+      </section>
+      
+      {/* Interactive Features */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -70,10 +75,6 @@ const HomePage = () => {
       
       <section id="download">
         <Download />
-      </section>
-      
-      <section id="beta-testing">
-        <BetaTesting />
       </section>
       
       <section id="faq">
