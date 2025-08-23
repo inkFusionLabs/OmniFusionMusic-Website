@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import Callback from './pages/Callback';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import BackgroundAnimationsController from './components/BackgroundAnimationsController';
 import './index.css';
 
 function App() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [animationIntensity, setAnimationIntensity] = useState(0.3);
+
   useEffect(() => {
     // Initialize services on client side only
     const initializeServices = async () => {
@@ -23,6 +27,11 @@ function App() {
           }
         }
         
+        // Start background animations after a short delay
+        setTimeout(() => {
+          setIsPlaying(true);
+        }, 2000);
+        
         console.log('App initialized successfully');
       } catch (error) {
         console.error('Failed to initialize app:', error);
@@ -35,6 +44,17 @@ function App() {
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
+      
+      {/* Background Animations - Runs across entire website */}
+      <BackgroundAnimationsController 
+        isPlaying={isPlaying}
+        intensity={animationIntensity}
+        enableParticles={true}
+        enableWaves={true}
+        enableEqualizer={true}
+        enableVinylRecords={true}
+      />
+      
       <Router>
         <div className="App">
           <Routes>
