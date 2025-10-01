@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import EventFlow from './pages/EventFlow';
 import Callback from './pages/Callback';
+import PrivateDownloads from './pages/PrivateDownloads';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import BackgroundAnimationsController from './components/BackgroundAnimationsController';
@@ -62,6 +63,7 @@ function App() {
             <Route path="/eventflow" element={<EventFlow />} />
             <Route path="/callback" element={<Callback />} />
             <Route path="/callback/:type" element={<Callback />} />
+            <Route path="/private-downloads" element={<PrivateDownloads />} />
           </Routes>
         </div>
       </Router>

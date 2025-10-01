@@ -65,7 +65,15 @@ const Navigation = () => {
                 </button>
               )
             ))}
-            {/* Owner-only Open App button removed */}
+            
+            {/* Hidden Admin Link - Only visible to you */}
+            <a
+              href="/private-downloads"
+              className="text-transparent hover:text-white/20 transition-colors duration-200 font-medium text-xs"
+              title="Private Downloads"
+            >
+              🔒
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
