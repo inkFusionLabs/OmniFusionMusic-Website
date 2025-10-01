@@ -35,7 +35,7 @@ const PrivateDownloads = () => {
       url: 'https://github.com/inkFusionLabs/DJ-dashboard-/releases/download/v1.0.2/Event.Flow.-.DJ.Dashboard-1.0.2-mac.zip',
       platform: 'macOS',
       icon: '🍎',
-      description: 'Professional DJ Dashboard for macOS. Includes installation script and security bypass guide.'
+      description: 'Professional DJ Dashboard for macOS. Just double-click the installer - no technical knowledge needed!'
     },
     {
       name: 'Event Flow DJ Dashboard - Windows',
@@ -146,9 +146,8 @@ const PrivateDownloads = () => {
               <strong>🍎 macOS Users:</strong> You'll see a security warning after downloading. This is normal for unsigned applications.
             </p>
             <div className="text-yellow-100 text-xs space-y-1">
-              <p><strong>Quick Fix:</strong> System Preferences → Security & Privacy → General → "Open Anyway"</p>
-              <p><strong>Easy Way:</strong> Run the included install-macos.sh script for automated setup</p>
-              <p><strong>Alternative:</strong> Right-click the file → "Open" → Click "Open" again in the warning</p>
+              <p><strong>Super Easy:</strong> Just double-click "Install DJ Dashboard.command" and follow the simple steps!</p>
+              <p><strong>If you see a security warning:</strong> Right-click the app → "Open" → Click "Open" again</p>
             </div>
           </div>
         </div>
