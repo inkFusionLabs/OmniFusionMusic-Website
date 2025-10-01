@@ -23,6 +23,7 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Home', id: 'hero' },
+    { name: 'Event Flow', href: '/eventflow' },
     { name: 'Contact', id: 'contact' }
   ];
 
@@ -46,13 +47,23 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-white/70 hover:text-white transition-colors duration-300 font-medium"
-              >
-                {item.name}
-              </button>
+              item.href ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-white/70 hover:text-white transition-colors duration-300 font-medium"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-white/70 hover:text-white transition-colors duration-300 font-medium"
+                >
+                  {item.name}
+                </button>
+              )
             ))}
             {/* Owner-only Open App button removed */}
           </div>
@@ -77,13 +88,24 @@ const Navigation = () => {
           <div className="md:hidden bg-black/95 backdrop-blur-md border-t border-white/10">
             <div className="px-6 py-4 space-y-4">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-white/70 hover:text-white transition-colors duration-300 font-medium py-2"
-                >
-                  {item.name}
-                </button>
+                item.href ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block w-full text-left text-white/70 hover:text-white transition-colors duration-300 font-medium py-2"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className="block w-full text-left text-white/70 hover:text-white transition-colors duration-300 font-medium py-2"
+                  >
+                    {item.name}
+                  </button>
+                )
               ))}
               {/* Owner-only Open App button for mobile removed */}
             </div>

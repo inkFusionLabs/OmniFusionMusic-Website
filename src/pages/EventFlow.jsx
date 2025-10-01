@@ -85,10 +85,25 @@ const EventFlow = () => {
             From small gatherings to large conferences, EventFlow streamlines every aspect of your event experience.
           </p>
           
-          <div className="flex items-center justify-center mb-8">
-            <span className="px-6 py-3 bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-purple-200 rounded-full text-lg font-semibold">
-              Coming Soon - Q2 2025
+          <div className="flex items-center justify-center mb-8 gap-4">
+            <span className="px-6 py-3 bg-gradient-to-r from-yellow-500/30 to-orange-500/30 text-yellow-200 rounded-full text-lg font-semibold">
+              🚀 Coming Soon
             </span>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full text-lg opacity-75 cursor-not-allowed"
+              disabled
+            >
+              🎵 Request App - Coming Soon
+            </button>
+            <button 
+              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-full text-lg opacity-75 cursor-not-allowed"
+              disabled
+            >
+              🎛️ DJ Dashboard - Coming Soon
+            </button>
           </div>
         </div>
       </section>
@@ -111,7 +126,7 @@ const EventFlow = () => {
 
           {/* Two Apps Preview */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-3xl p-8 border border-white/10 opacity-75">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
@@ -119,12 +134,13 @@ const EventFlow = () => {
               </div>
               <h3 className="text-white font-bold text-2xl mb-3 text-center">Request a Song App</h3>
               <p className="text-white/80 text-center mb-4">Submit song requests instantly and track their status in real-time</p>
-              <div className="flex items-center justify-center">
-                <span className="px-4 py-2 bg-purple-500/30 text-purple-200 rounded-full text-sm font-semibold">Coming Soon</span>
+              <div className="flex items-center justify-center gap-2">
+                <span className="px-4 py-2 bg-yellow-500/30 text-yellow-200 rounded-full text-sm font-semibold">Coming Soon</span>
+                <span className="text-white/60 text-sm">In development</span>
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
+            <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-md rounded-3xl p-8 border border-white/10 opacity-75">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
@@ -132,8 +148,9 @@ const EventFlow = () => {
               </div>
               <h3 className="text-white font-bold text-2xl mb-3 text-center">DJ Dashboard App</h3>
               <p className="text-white/80 text-center mb-4">Manage all song requests, queue, and playlists from one powerful dashboard</p>
-              <div className="flex items-center justify-center">
-                <span className="px-4 py-2 bg-cyan-500/30 text-cyan-200 rounded-full text-sm font-semibold">Coming Soon</span>
+              <div className="flex items-center justify-center gap-2">
+                <span className="px-4 py-2 bg-yellow-500/30 text-yellow-200 rounded-full text-sm font-semibold">Coming Soon</span>
+                <span className="text-white/60 text-sm">In development</span>
               </div>
             </div>
           </div>
@@ -214,23 +231,26 @@ const EventFlow = () => {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-md rounded-3xl p-12 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Events?
+              Ready to Experience Event Flow?
             </h2>
             <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
-              Join the waitlist to be the first to experience EventFlow when it launches. 
-              Get early access, exclusive features, and special launch pricing.
+              Event Flow is currently in development. Join our waitlist to be the first to experience 
+              our professional-grade music request platform and DJ dashboard. Perfect for events, parties, and professional DJs.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button 
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full text-lg opacity-75 cursor-not-allowed"
+                disabled
+              >
+                🎵 Join Waitlist - Coming Soon
+              </button>
               <a 
                 href="/" 
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full text-lg transition-all duration-300 hover:from-purple-700 hover:to-pink-700 hover:scale-105 shadow-lg shadow-purple-500/50"
+                className="px-6 py-3 bg-white/10 backdrop-blur-md text-white font-semibold rounded-full text-base border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-white/40"
               >
                 Back to Home
               </a>
-              <button className="px-6 py-3 bg-white/10 backdrop-blur-md text-white font-semibold rounded-full text-base border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-white/40">
-                Join Waitlist
-              </button>
             </div>
           </div>
         </div>
