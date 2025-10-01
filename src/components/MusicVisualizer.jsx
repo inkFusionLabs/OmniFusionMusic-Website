@@ -282,4 +282,4 @@ const MusicVisualizer = ({ isPlaying = false, audioData = null }) => {
   );
 };
 
-export default MusicVisualizer; 
+export default MusicVisualizer;

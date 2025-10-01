@@ -1,33 +1,77 @@
-import React from 'react';
-import ClientOnly from '../components/ClientOnly';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const Callback = () => {
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const [error, setError] = useState(null);
+  const [status, setStatus] = useState('Processing callback...');
+
+  useEffect(() => {
+    const type = searchParams.get('type');
+    const code = searchParams.get('code');
+    const error = searchParams.get('error');
+
+    if (error) {
+      setError(error);
+      setTimeout(() => navigate('/'), 3000);
+      return;
+    }
+
+    if (type === 'spotify') {
+      // Handle Spotify callback
+      if (code) {
+        setStatus('Spotify authentication successful! Redirecting...');
+        // Store the code temporarily for Spotify processing
+        localStorage.setItem('spotify_auth_code', code);
+        setTimeout(() => navigate('/'), 1500);
+      } else {
+        setError('No authorization code received from Spotify');
+        setTimeout(() => navigate('/'), 3000);
+      }
+    } else if (type === 'download') {
+      // Handle download callback
+      if (code === 'download_success') {
+        setStatus('Download completed successfully! Redirecting...');
+        setTimeout(() => navigate('/'), 1500);
+      } else {
+        setError('Download failed');
+        setTimeout(() => navigate('/'), 3000);
+      }
+    } else {
+      // Generic callback handling
+      if (code) {
+        setStatus('Callback processed successfully! Redirecting...');
+        setTimeout(() => navigate('/'), 1500);
+      } else {
+        setError('No callback data received');
+        setTimeout(() => navigate('/'), 3000);
+      }
+    }
+  }, [searchParams, navigate]);
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="text-center glass p-8 rounded-2xl">
+          <div className="text-red-400 text-6xl mb-4">❌</div>
+          <h1 className="text-2xl font-bold mb-4 text-white">Callback Error</h1>
+          <p className="opacity-80 mb-4 text-gray-300">{error}</p>
+          <p className="text-sm opacity-60 text-gray-400">Redirecting back to home page...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <ClientOnly fallback={
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black flex items-center justify-center p-6">
-        <div className="max-w-md w-full bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 text-center">
-          <div className="animate-pulse">
-            <div className="w-12 h-12 bg-gray-600 rounded-full mx-auto mb-6"></div>
-            <div className="h-8 bg-gray-600 rounded mb-4"></div>
-            <div className="h-4 bg-gray-600 rounded mb-6"></div>
-            <div className="h-4 bg-gray-600 rounded w-3/4 mx-auto"></div>
-          </div>
-        </div>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="text-center glass p-8 rounded-2xl">
+        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-teal-400 mx-auto mb-4"></div>
+        <h1 className="text-2xl font-bold mb-4 text-white">Processing Callback...</h1>
+        <p className="opacity-80 text-gray-300">{status}</p>
       </div>
-    }>
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black flex items-center justify-center p-6">
-        <div className="max-w-md w-full bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 text-center">
-          <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h2 className="text-2xl font-bold text-white mb-4">Success!</h2>
-          <p className="text-white/70 mb-6">Callback processed successfully.</p>
-        </div>
-      </div>
-    </ClientOnly>
+    </div>
   );
 };
 
-export default Callback; 
+export default Callback;
