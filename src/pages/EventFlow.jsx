@@ -252,6 +252,13 @@ const EventFlow = () => {
                 Back to Home
               </a>
             </div>
+            
+            {/* Powered by OmniFusion Music */}
+            <div className="mt-8 pt-6 border-t border-white/10">
+              <p className="text-white/60 text-sm">
+                Powered by <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-semibold">OmniFusion Music</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
