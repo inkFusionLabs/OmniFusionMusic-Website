@@ -35,7 +35,7 @@ const PrivateDownloads = () => {
       url: 'https://github.com/inkFusionLabs/DJ-dashboard-/releases/download/v1.0.2/Event.Flow.-.DJ.Dashboard-1.0.2-mac.zip',
       platform: 'macOS',
       icon: '🍎',
-      description: 'Professional DJ Dashboard for macOS. Extract and drag to Applications folder.'
+      description: 'Professional DJ Dashboard for macOS. Right-click to open after download to bypass security warning.'
     },
     {
       name: 'Event Flow DJ Dashboard - Windows',
@@ -139,6 +139,13 @@ const PrivateDownloads = () => {
           <h1 className="text-4xl font-bold text-white mb-4">Event Flow DJ Dashboard</h1>
           <p className="text-xl text-gray-300 mb-2">Professional DJ Dashboard Downloads</p>
           <p className="text-gray-400">Version 1.0.2 - Latest Release</p>
+          
+          {/* macOS Security Warning */}
+          <div className="mt-6 p-4 bg-yellow-900/20 border border-yellow-500/30 rounded-lg max-w-2xl mx-auto">
+            <p className="text-yellow-200 text-sm">
+              <strong>🍎 macOS Users:</strong> After downloading, right-click the file and select "Open" to bypass the security warning. This is normal for unsigned applications.
+            </p>
+          </div>
         </div>
 
         {/* Download Files Grid */}
