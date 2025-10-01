@@ -13,10 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
-    <title>OmniFusion Music - Universal Music Command Center | Cross-Platform Desktop App</title>
-    <meta name="title" content="OmniFusion Music - Universal Music Command Center | Cross-Platform Desktop App">
-    <meta name="description" content="The ultimate universal music streaming desktop application. Connect to Spotify, Apple Music, YouTube Music, Tidal, and more from one beautiful, seamless interface. Download for Windows, macOS, and Linux. Free and open-source.">
-    <meta name="keywords" content="music streaming, spotify, apple music, youtube music, tidal, desktop app, universal music, music player, cross-platform, tauri, react, music hub, music management, playlist sync, music discovery">
+    <title>Omni Fusion Music - Request a Song App & DJ Dashboard | Coming Soon</title>
+    <meta name="title" content="Omni Fusion Music - Request a Song App & DJ Dashboard | Coming Soon">
+    <meta name="description" content="Two revolutionary apps coming soon: Request a Song App for instant music requests and DJ Dashboard for managing them. Join the waitlist for early access. Launching Q2 2025.">
+    <meta name="keywords" content="song request app, dj dashboard, music request app, dj software, song management, request songs, dj tools, music app, coming soon, omni fusion music, waitlist">
     <meta name="author" content="InkFusion Labs">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="English">
@@ -29,20 +29,20 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://omni-fusion-music-website.vercel.app/">
-    <meta property="og:title" content="OmniFusion Music - Universal Music Command Center">
-    <meta property="og:description" content="The ultimate universal music streaming desktop application. Connect to Spotify, Apple Music, YouTube Music, and more from one beautiful, seamless interface. Download for Windows, macOS, and Linux.">
+    <meta property="og:title" content="Omni Fusion Music - Request a Song App & DJ Dashboard Coming Soon">
+    <meta property="og:description" content="Two revolutionary apps launching Q2 2025: Request a Song App for instant music requests and DJ Dashboard for managing them. Join the waitlist now!">
     <meta property="og:image" content="https://omni-fusion-music-website.vercel.app/og-image.svg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="OmniFusion Music - Universal Music Streaming Desktop App">
-    <meta property="og:site_name" content="OmniFusion Music">
+    <meta property="og:image:alt" content="Omni Fusion Music - Request a Song App & DJ Dashboard">
+    <meta property="og:site_name" content="Omni Fusion Music">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://omni-fusion-music-website.vercel.app/">
-    <meta property="twitter:title" content="OmniFusion Music - Universal Music Command Center">
-    <meta property="twitter:description" content="The ultimate universal music streaming desktop application. Connect to Spotify, Apple Music, YouTube Music, and more from one beautiful, seamless interface.">
+    <meta property="twitter:title" content="Omni Fusion Music - Request a Song App & DJ Dashboard Coming Soon">
+    <meta property="twitter:description" content="Two revolutionary apps launching Q2 2025: Request a Song App for instant music requests and DJ Dashboard for managing them. Join the waitlist now!">
     <meta property="twitter:image" content="https://omni-fusion-music-website.vercel.app/og-image.svg">
     <meta property="twitter:creator" content="@inkfusionlabs">
     <meta property="twitter:site" content="@inkfusionlabs">
@@ -52,11 +52,11 @@
     <meta name="msapplication-TileColor" content="#8B5CF6">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="OmniFusion Music">
+    <meta name="apple-mobile-web-app-title" content="Omni Fusion Music">
     
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
+    <!-- X-Frame-Options should be set via HTTP headers, not meta tags -->
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     
@@ -73,10 +73,10 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-TEST123456', {
-        page_title: 'OmniFusion Music - Homepage',
+        page_title: 'Omni Fusion Music - Homepage',
         page_location: window.location.href,
         custom_map: {
-          'custom_parameter_1': 'download_clicks',
+          'custom_parameter_1': 'song_requests',
           'custom_parameter_2': 'feature_interactions'
         }
       });
@@ -89,41 +89,56 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "OmniFusion Music",
-      "description": "Universal music streaming desktop application that aggregates multiple streaming services into one beautiful interface",
+      "@type": "WebSite",
+      "name": "Omni Fusion Music",
+      "description": "Two revolutionary music apps coming soon: Request a Song App for instant song requests and DJ Dashboard for managing them.",
       "url": "https://omni-fusion-music-website.vercel.app/",
-      "applicationCategory": "MusicApplication",
-      "operatingSystem": "Windows, macOS, Linux",
-      "softwareVersion": "1.0.0",
-      "datePublished": "2024-01-01",
-      "dateModified": "2024-12-20",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      },
       "publisher": {
         "@type": "Organization",
         "name": "InkFusion Labs",
         "url": "https://inkfusionlabs.com"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "150",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "screenshot": "https://omni-fusion-music-website.vercel.app/screenshots/desktop.png",
-      "featureList": [
-        "Universal music streaming",
-        "Voice control",
-        "Cross-platform support",
-        "Playlist synchronization",
-        "AI-powered recommendations"
-      ]
+      "potentialAction": {
+        "@type": "RegisterAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://omni-fusion-music-website.vercel.app/#newsletter"
+        },
+        "result": {
+          "@type": "JoinAction",
+          "name": "Join Waitlist"
+        }
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Omni Fusion Music - Request a Song App",
+      "description": "Mobile app for instant song requests with real-time status tracking and push notifications",
+      "applicationCategory": "MusicApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Omni Fusion Music - DJ Dashboard",
+      "description": "Professional DJ dashboard for managing song requests, queue management, and analytics",
+      "applicationCategory": "MultimediaApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     }
     </script>
     
@@ -146,9 +161,10 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     
-    <!-- Service Worker Registration -->
+    <!-- Service Worker Registration - Disabled for dev mode -->
     <script>
-      if ('serviceWorker' in navigator) {
+      // Only register service worker in production
+      if ('serviceWorker' in navigator && window.location.hostname !== 'localhost') {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js')
             .then((registration) => {
@@ -157,6 +173,16 @@
             .catch((registrationError) => {
               console.log('SW registration failed: ', registrationError);
             });
+        });
+      }
+      
+      // Unregister any existing service workers in dev mode
+      if ('serviceWorker' in navigator && window.location.hostname === 'localhost') {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister();
+            console.log('Service worker unregistered for dev mode');
+          }
         });
       }
     </script>

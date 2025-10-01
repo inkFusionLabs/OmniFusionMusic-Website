@@ -98,57 +98,23 @@ const AppShowcase = () => {
           ))}
         </div>
 
-        {/* Interactive Showcase */}
+        {/* Feature Details */}
         <div className="bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Screenshot/Preview */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl p-4 border border-white/10">
-                <div className="bg-gray-800 rounded-xl overflow-hidden">
-                  <img 
-                    src={showcaseItems[activeFeature]?.image || '/screenshots/main-interface.png'} 
-                    alt={`OmniFusion Music ${showcaseItems[activeFeature]?.title || 'Main Interface'}`} 
-                    className="w-full h-auto object-cover"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
-                  />
-                  <div className="h-64 flex items-center justify-center" style={{display: 'none'}}>
-                    <div className="text-center">
-                      <div className="text-6xl mb-4">🎵</div>
-                      <p className="text-white/60">App Screenshot Preview</p>
-                      <p className="text-white/40 text-sm mt-2">Upload your screenshot to {showcaseItems[activeFeature]?.image || '/screenshots/main-interface.png'}</p>
-                    </div>
-                  </div>
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              {showcaseItems[activeFeature]?.title || 'Main Interface'}
+            </h3>
+            <p className="text-white/70 mb-6 max-w-2xl mx-auto">
+              {showcaseItems[activeFeature]?.description || 'Clean, intuitive design that puts your music first'}
+            </p>
+            
+            <div className="space-y-3 max-w-md mx-auto">
+              {(showcaseItems[activeFeature]?.features || ['Universal search', 'Quick access toolbar', 'Now playing widget']).map((feature, index) => (
+                <div key={index} className="flex items-center gap-3 justify-center">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                  <span className="text-white/80">{feature}</span>
                 </div>
-              </div>
-              
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-            </div>
-
-            {/* Feature Details */}
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                {showcaseItems[activeFeature]?.title || 'Main Interface'}
-              </h3>
-              <p className="text-white/70 mb-6">
-                {showcaseItems[activeFeature]?.description || 'Clean, intuitive design that puts your music first'}
-              </p>
-              
-              <div className="space-y-3">
-                {(showcaseItems[activeFeature]?.features || ['Universal search', 'Quick access toolbar', 'Now playing widget']).map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                    <span className="text-white/80">{feature}</span>
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
         </div>
