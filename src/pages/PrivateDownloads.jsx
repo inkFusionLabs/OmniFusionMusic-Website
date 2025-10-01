@@ -32,7 +32,7 @@ const PrivateDownloads = () => {
       name: 'Event Flow DJ Dashboard - macOS',
       version: 'v1.0.2',
       size: '97 MB',
-      url: 'https://github.com/inkFusionLabs/DJ-dashboard-/releases/download/v1.0.2/Event%20Flow%20-%20DJ%20Dashboard-1.0.2-mac.zip',
+      url: 'https://github.com/inkFusionLabs/DJ-dashboard-/releases/download/v1.0.2/Event.Flow.-.DJ.Dashboard-1.0.2-mac.zip',
       platform: 'macOS',
       icon: '🍎',
       description: 'Professional DJ Dashboard for macOS. Extract and drag to Applications folder.'
@@ -41,7 +41,7 @@ const PrivateDownloads = () => {
       name: 'Event Flow DJ Dashboard - Windows',
       version: 'v1.0.2',
       size: '85 MB',
-      url: 'https://github.com/inkFusionLabs/DJ-dashboard-/releases/download/v1.0.2/Event%20Flow%20-%20DJ%20Dashboard-1.0.2-windows.zip',
+      url: 'https://github.com/inkFusionLabs/DJ-dashboard-/releases/download/v1.0.2/Event.Flow.-.DJ.Dashboard-1.0.2-windows.zip',
       platform: 'Windows',
       icon: '🪟',
       description: 'Professional DJ Dashboard for Windows. Extract and run the executable.'
@@ -50,7 +50,7 @@ const PrivateDownloads = () => {
       name: 'Event Flow DJ Dashboard - Linux',
       version: 'v1.0.2',
       size: '104 MB',
-      url: 'https://github.com/inkFusionLabs/DJ-dashboard-/releases/download/v1.0.2/Event%20Flow%20-%20DJ%20Dashboard-1.0.2.AppImage',
+      url: 'https://github.com/inkFusionLabs/DJ-dashboard-/releases/download/v1.0.2/Event.Flow.-.DJ.Dashboard-1.0.2.AppImage',
       platform: 'Linux',
       icon: '🐧',
       description: 'Professional DJ Dashboard for Linux. Make executable and run.'
