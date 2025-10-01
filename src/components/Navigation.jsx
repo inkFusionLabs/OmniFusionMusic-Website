@@ -66,11 +66,11 @@ const Navigation = () => {
               )
             ))}
             
-            {/* Hidden Admin Link - Only visible to you */}
+            {/* Admin Link - Private Downloads */}
             <a
               href="/private-downloads"
-              className="text-transparent hover:text-white/20 transition-colors duration-200 font-medium text-xs"
-              title="Private Downloads"
+              className="text-white/40 hover:text-white/80 transition-colors duration-200 font-medium text-sm"
+              title="Private Downloads - Admin Only"
             >
               🔒
             </a>
@@ -115,7 +115,16 @@ const Navigation = () => {
                   </button>
                 )
               ))}
-              {/* Owner-only Open App button for mobile removed */}
+              
+              {/* Admin Link - Private Downloads for Mobile */}
+              <a
+                href="/private-downloads"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full text-left text-white/50 hover:text-white/80 transition-colors duration-300 font-medium py-2 border-t border-white/10 pt-4"
+                title="Private Downloads - Admin Only"
+              >
+                🔒 Private Downloads
+              </a>
             </div>
           </div>
         )}
