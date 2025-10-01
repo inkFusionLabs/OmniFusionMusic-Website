@@ -1,7 +1,5 @@
 import React from 'react';
 import Hero from './Hero';
-import EventFlow from './EventFlow';
-import Features from './Features';
 import Newsletter from './Newsletter';
 import AppConnectionStatus from './AppConnectionStatus';
 import PressKit from './PressKit';
@@ -20,13 +18,6 @@ const HomePage = () => {
         <Hero />
       </section>
       
-      <section id="eventflow">
-        <EventFlow />
-      </section>
-      
-      <section id="features">
-        <Features />
-      </section>
       <section id="newsletter">
         <Newsletter />
       </section>

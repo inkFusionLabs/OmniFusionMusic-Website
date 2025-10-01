@@ -1,6 +1,37 @@
 import React, { useEffect } from 'react';
 
 const PerformanceMonitor = () => {
+  const reportPerformanceMetric = (metric, value, details = '') => {
+    // Send to analytics service
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'performance_metric', {
+        event_category: 'Performance',
+        event_label: metric,
+        value: value,
+        custom_parameter_1: details,
+        non_interaction: true
+      });
+    }
+
+    // Send to custom analytics endpoint
+    fetch('/api/analytics/performance', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        metric,
+        value,
+        details,
+        timestamp: Date.now(),
+        url: window.location.href,
+        userAgent: navigator.userAgent
+      })
+    }).catch(error => {
+      console.log('Failed to send performance metric:', error);
+    });
+  };
+
   useEffect(() => {
     // Monitor Core Web Vitals
     if ('PerformanceObserver' in window) {
@@ -182,37 +213,6 @@ const PerformanceMonitor = () => {
     });
 
   }, []);
-
-  const reportPerformanceMetric = (metric, value, details = '') => {
-    // Send to analytics service
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'performance_metric', {
-        event_category: 'Performance',
-        event_label: metric,
-        value: value,
-        custom_parameter_1: details,
-        non_interaction: true
-      });
-    }
-
-    // Send to custom analytics endpoint
-    fetch('/api/analytics/performance', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        metric,
-        value,
-        details,
-        timestamp: Date.now(),
-        url: window.location.href,
-        userAgent: navigator.userAgent
-      })
-    }).catch(error => {
-      console.log('Failed to send performance metric:', error);
-    });
-  };
 
   // This component doesn't render anything visible
   return null;

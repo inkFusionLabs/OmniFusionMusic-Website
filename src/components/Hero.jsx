@@ -39,24 +39,10 @@ const Hero = () => {
           </span>
         </h1>
         
-        {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Revolutionizing music experiences with innovative technology and seamless integration for music lovers and DJs.
-        </p>
-
-        {/* Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <a href="#eventflow" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full text-lg transition-all duration-300 hover:from-purple-700 hover:to-pink-700 hover:scale-105 shadow-lg shadow-purple-500/50">
-            Explore EventFlow
-          </a>
-          
-          <a href="#newsletter" className="px-6 py-3 bg-white/10 backdrop-blur-md text-white font-semibold rounded-full text-base border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-white/40 hover:scale-105">
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-              Join Waitlist
-            </span>
+        {/* Call to Action Button */}
+        <div className="flex justify-center items-center mb-12">
+          <a href="/eventflow" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full text-lg transition-all duration-300 hover:from-purple-700 hover:to-pink-700 hover:scale-105 shadow-lg shadow-purple-500/50">
+            Our Products
           </a>
         </div>
 
