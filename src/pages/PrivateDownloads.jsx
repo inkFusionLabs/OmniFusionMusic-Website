@@ -142,9 +142,13 @@ const PrivateDownloads = () => {
           
           {/* macOS Security Warning */}
           <div className="mt-6 p-4 bg-yellow-900/20 border border-yellow-500/30 rounded-lg max-w-2xl mx-auto">
-            <p className="text-yellow-200 text-sm">
-              <strong>🍎 macOS Users:</strong> After downloading, right-click the file and select "Open" to bypass the security warning. This is normal for unsigned applications.
+            <p className="text-yellow-200 text-sm mb-2">
+              <strong>🍎 macOS Users:</strong> You'll see a security warning after downloading. This is normal for unsigned applications.
             </p>
+            <div className="text-yellow-100 text-xs space-y-1">
+              <p><strong>Quick Fix:</strong> System Preferences → Security & Privacy → General → "Open Anyway"</p>
+              <p><strong>Alternative:</strong> Right-click the file → "Open" → Click "Open" again in the warning</p>
+            </div>
           </div>
         </div>
 
